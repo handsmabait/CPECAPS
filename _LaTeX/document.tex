@@ -1,3 +1,4 @@
+% !TeX root = document.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{./format/preamble.ltx} 
 
@@ -35,19 +36,15 @@
 
 % specify if dissertation, thesis, project, dissertation proposal, thesis proposal, project proposal 
 %\newcommand{\documentType}{Thesis} 
-\newcommand{\documentType}{Thesis Proposal}
+\newcommand{\documentType}{Capstone Project on Operational Technologies}
 %\newcommand{\documentType}{Dissertation Proposal}
 %\newcommand{\documentType}{Dissertation}
 \newcommand{\college}{Gokongwei College of Engineering}
 \newcommand{\department}{Department of Electronics and Computer Engineering} 
-\newcommand{\degreeType}{Bachelor of Science}
 %\newcommand{\degreeType}{Bachelor and Master of Science}  
 %\newcommand{\degreeType}{Master of Engineering Program} 
 %\newcommand{\degreeType}{Master of Science} 
-%\newcommand{\degreeType}{Doctor of Philosophy} 
-\newcommand{\degree}{Electronics and Communications Engineering}
-\newcommand{\degreeAbbrv}{BS-ECE}
-%\newcommand{\degreeAbbrv}{BS-MS-ECE}
+
 %\newcommand{\degreeAbbrv}{MEP-ECE}
 %\newcommand{\degreeAbbrv}{MS-ECE}
 %\newcommand{\degreeAbbrv}{PhD-ECE}
@@ -83,20 +80,14 @@
 
 \newcommand{\numberOfAuthors}{5} % adapt the number of names below accordingly and sort the sunames in alphabetically ascending manner, like in the following example
 
-\defineAuthor{surname1}{dela Cruz}
-\defineAuthor{firstname1}{Juan Z.}
+\defineAuthor{surname1}{Calaguian}
+\defineAuthor{firstname1}{Nathan Raekel L.}
 
-\defineAuthor{surname2}{Franco}
-\defineAuthor{firstname2}{Nat Y.}
+\defineAuthor{surname2}{Ellar}
+\defineAuthor{firstname2}{Gerald Antonio P.}
 
-\defineAuthor{surname3}{Garcia}
-\defineAuthor{firstname3}{Sebastian X.}
-
-\defineAuthor{surname4}{Martinez}
-\defineAuthor{firstname4}{Isabella W.}
-
-\defineAuthor{surname5}{Rianzares}
-\defineAuthor{firstname5}{Max V.}
+\defineAuthor{surname3}{Mahait}
+\defineAuthor{firstname3}{Hans}
 
 \newcommand{\documentTitle}{Electrical, Electromagnetic, and Optical Characterization of the InP/InGaAs~Alloy~System} % put tilde (~) between words to indicate non-breaking adjacent words
 
@@ -312,11 +303,11 @@
 	\cleardoublepage 
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\SingleSpacing
-	\appendix
-	\renewcommand{\thechapter}{\Alph{chapter}}
-	\renewcommand{\thesection}{\thechapter\arabic{section}}
-	\appto\appendix{\renewcommand\thechapter{\AlphAlph{\value{chapter}}}} % for increasing appendix chapters beyond Z, i.e. AA, AB, etc.
+	%\SingleSpacing
+	%\appendix
+	%\renewcommand{\thechapter}{\Alph{chapter}}
+	%\renewcommand{\thesection}{\thechapter\arabic{section}}
+	%\appto\appendix{\renewcommand\thechapter{\AlphAlph{\value{chapter}}}} % for increasing appendix chapters beyond Z, i.e. AA, AB, etc.
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\chapter{Student Research Ethics Clearance}
@@ -385,11 +376,7 @@
 	\cleardoublepage
 	{
 	\ClearWallPaper
-	\includepdf[pages=-,%
-	scale=1.0,%
-	frame,%
-	]
-	{article_forum_paper.pdf}
+
 	}
 	\cleardoublepage
 
