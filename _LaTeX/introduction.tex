@@ -1,38 +1,45 @@
 \section{Background of the Study}
 
-Aside from the usual text descriptions of the background, put here figures that will cast images to your audience about the context of your work.
+ Classical CV approaches used skin color segmentation, contour analysis, optical flow, and handcrafted descriptors (HOG, motion history images) to detect and classify gestures. Despite being simple and interpretable, those methods struggle with background variation and scale. The deep-learning era replaced handcrafted features with CNNs that learn hierarchical visual features directly from image data, yielding much higher accuracy for static hand pose and short-sequence recognition tasks. Many recent capstone and journal implementations pair OpenCV (for capture/preprocessing) with CNNs built and trained in TensorFlow/PyTorch to recognize a fixed vocabulary of gestures in real time. These hybrid pipelines are practical for capstone projects because OpenCV handles efficient frame processing while CNNs provide generalization across users and backgrounds. (https://pmc.ncbi.nlm.nih.gov/articles/PMC8321080/)
 
-\graytx{\Blindtext}
-
+  Instead of classifying raw images, several high-performance systems first extract skeletal landmarks (e.g., MediaPipe’s 21-point hand model) and feed those coordinates to a classifier (small CNN, MLP, or temporal model like LSTM). Landmark-based pipelines reduce sensitivity to background and scale and make models smaller and faster, which is ideal for mobile or AR deployment. Markerless commercial devices such as the Leap Motion Controller and Ultraleap cameras provide very accurate 3D joint data using IR illumination and multi-camera setups; those give superior fidelity but add hardware cost and integration work. For a capstone aiming at broad deployability, a practical approach is to prototype with MediaPipe + OpenCV + CNN (or lightweight temporal model) and consider Ultraleap integration later for high-precision installations. (https://arxiv.org/abs/2006.10214)
 
 \section{Prior Studies}
+MediaPipe Hands (Zhang et al., Google / arXiv; MediaPipe docs).
+ MediaPipe Hands presents a two-stage on-device pipeline (palm detector + hand-landmark regressor) that extracts 21 hand landmarks from a single RGB frame and runs in real time on mobile GPUs; the architecture and open implementation are widely used as a practical basis for gesture recognition because they offer compact, robust landmark outputs that are easier to classify than raw images. This work is especially relevant to mobile or cross-platform deployment without extra hardware. (https://arxiv.org/abs/2006.10214)
+Ultraleap / Leap Motion surveys and reviews.
+ Reviews and vendor docs show that Ultraleap’s IR stereo cameras and LED illumination give very precise 3D joint tracking and low latency, making them popular for VR/installation work; academic comparisons find Leap/Ultraleap and MediaPipe are both capable, with trade-offs in precision versus hardware requirements. Ultraleap or similar IR camera hardware is a practical choice for professional installation quality (amusement park kiosk, VR attraction). (docs.ultraleap.com)
+Sign-language & gesture recognition studies (landmark + CNN/LSTM).
+ ASL and other sign recognition papers demonstrate that combining landmark features (from MediaPipe or depth sensors) with temporal models (LSTM/CNN temporal stacks) yields state-of-the-art results for complex hand sequences. These studies emphasize the importance of considering variable visibility conditions as spellcasting often requires temporal tracing (drawing shapes), and not just static poses. This also provides insight into dataset design and labeling strategies. (https://arxiv.org/html/2406.03729v1)
+A comparative study of advanced technologies and methods in hand gesture analysis and recognition systems (Rahman et.al, 2025)
+Hand gesture recognition is advancing as a key technology for human–machine interaction. This study reviews both non-vision (e.g., sensor-based) and vision-based approaches, examining tools such as hidden Markov models, finite state machines, color modeling, naive Bayes, deep networks, histogram features, and fuzzy clustering. Methods are categorized into detection, tracking, and recognition phases, with comparisons across static and dynamic gestures. The review highlights current technologies, their advantages and limitations, and identifies directions for future research.
+Hand Gesture Recognition Based on Computer Vision: A Review of Techniques (Oudah, Al-Naji, & Chahl, 2020)
+Hand gestures, as a form of nonverbal communication, are applied in fields such as HCI, assistive communication, robotics, home automation, and healthcare. Research spans sensor-based and vision-based methods, with gestures categorized as static, dynamic, or hybrid. This paper reviews literature on gesture recognition, comparing techniques in terms of segmentation, classification, datasets, gesture types, camera use, detection range, and performance. It provides a comprehensive overview of methods, their merits and limitations, and potential applications.
 
-Put here a narrative and a \index{summary}summary (not a duplicate) of your literature review chapter.  In this section, summarize and highlight the gap(s) found in the literature review in Chapter~\ref{ch:litrev}. Preferably, a table showing the summary would be helpful. 
+% Put here a narrative and a \index{summary}summary (not a duplicate) of your literature review chapter.  In this section, summarize and highlight the gap(s) found in the literature review in Chapter~\ref{ch:litrev}. Preferably, a table showing the summary would be helpful. 
 
-Prior Studies or Literature Review\footnote{The main difference between the Prior Studies and Literature Review is that the Prior Studies is done in a concise manner.  By the way, this is also an example of a footnote usage.} (expansion of the Prior Studies) is basically about \redtx{competition}. \hl{Competition}.
+% Prior Studies or Literature Review\footnote{The main difference between the Prior Studies and Literature Review is that the Prior Studies is done in a concise manner.  By the way, this is also an example of a footnote usage.} (expansion of the Prior Studies) is basically about \redtx{competition}. \hl{Competition}.
 
-So the \underline{suggested} goals in writing the narrative of the Prior Studies in summative and highlighted forms  are, in no particular order:
+% So the \underline{suggested} goals in writing the narrative of the Prior Studies in summative and highlighted forms  are, in no particular order:
 
-\begin{enumerate}
-	\item to mention the problem briefly; 
+% \begin{enumerate}
+% 	\item to mention the problem briefly; 
 
-	\item to show the features of the existing literature in solving the problem
+% 	\item to show the features of the existing literature in solving the problem
 
-	\item to show the weaknesses of the solutions of existing literature 
+% 	\item to show the weaknesses of the solutions of existing literature 
 
-	\item to show how your solution is better (can be better (for proposals))
-\end{enumerate}
+% 	\item to show how your solution is better (can be better (for proposals))
+% \end{enumerate}
 
-\noindent If the suggested table will be placed, please discuss it in light of the above-mentioned items. 
+% \noindent If the suggested table will be placed, please discuss it in light of the above-mentioned items. 
 
- \graytx{\blindtext}
+%  \graytx{\blindtext}
 
 
 \section{Problem Statement}
 
-The problem statement needs to be very clear and to the point. 
-
-\noindent A persuasive problem statement from a contextualized and intended-audience-awareness perspective consists of:
+ Immersive interactive systems in gaming, AR, amusement parks, and accessibility still rely heavily on handheld controllers, touchscreens, or specialized hardware that break immersion, add cost, or exclude users with differing motor abilities. Markerless, camera-based hand-gesture recognition promises touchless, expressive input suitable for “magical” metaphors (casting spells, tracing runes) that are intuitive and socially engaging. However, real-world deployment is challenged by variable lighting, occlusion, noisy backgrounds, and latency. These problems make accuracy and robustness the central obstacles for any spell-casting CV system. Modern solutions that combine real-time hand-landmark extraction and convolutional neural networks (CNNs) have narrowed the gap, but careful design is required to meet the high level competency goals for responsiveness, cross-platform deployment, and accessibility. (https://pmc.ncbi.nlm.nih.gov/articles/PMC8321080/)\noindent A persuasive problem statement from a contextualized and intended-audience-awareness perspective consists of:
 
 \begin{enumerate}
 	\item PS1: description of the ideal scenario for your intended audience	
@@ -73,15 +80,15 @@ Your objectives are the states that you desire to achieve in solving the problem
 \subsection{Specific Objectives (SOs)}
 
 \begin{itemize}
-	\item \Copy{SO1}{SO1: To \graytx{\lipsumsentence[76]} };
+	\item \Copy{SO1}{SO1: To implement a real-time pipeline that captures camera frames, extracts robust hand features (landmarks or processed images), and classifies gestures into a configurable spell vocabulary with low latency (~30 fps target) and high accuracy;};
 	
-	\item \Copy{SO2}{SO2: To \graytx{\lipsumsentence[6]}  };
+	\item \Copy{SO2}{SO2: To  make the model robust to lighting, background clutter, and user variation through data augmentation and landmark-based representations  };
 	
-	\item \Copy{SO3}{SO3: To \graytx{\lipsumsentence[45]} };
+	\item \Copy{SO3}{SO3: To design the system to be deployable across desktop, mobile, and simple AR setups using cross-platform libraries (OpenCV, MediaPipe, TensorFlow/TensorFlow Lite) };
 	
-	\item \Copy{SO4}{SO4: To \graytx{\lipsumsentence[38]} };
+	\item \Copy{SO4}{SO4: To make the interaction ergonomically accessible by supporting alternative gestures and calibration for users with different ranges of motion };
 	
-	\item \Copy{SO5}{SO5: To \graytx{\lipsumsentence[17]} };
+	\item \Copy{SO5}{SO5: On UX side,  to make spells feel immediately meaningful (clear mapping between motion and effect), provide instant feedback when a spell is recognized, and allow easy extension of the spell set.  };
 \end{itemize}
 
 

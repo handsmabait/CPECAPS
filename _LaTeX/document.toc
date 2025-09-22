@@ -1,0 +1,88 @@
+\contentsline {chapter}{Abstract}{ii}{section*.1}%
+\contentsline {chapter}{Table of Contents}{iii}{section*.3}%
+\contentsline {chapter}{List of Figures}{iv}{section*.4}%
+\contentsline {chapter}{List of Tables}{v}{section*.5}%
+\contentsline {chapter}{Abbreviations and Acronyms}{vi}{section*.6}%
+\contentsline {chapter}{Notations}{vii}{section*.8}%
+\contentsline {chapter}{Glossary}{viii}{section*.10}%
+\contentsline {chapter}{Listings}{ix}{section*.12}%
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Introduction}}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background of the Study}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Prior Studies}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Problem Statement}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Objectives and Deliverables}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}General Objective (GO)}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Specific Objectives (SOs)}{6}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Expected Deliverables}{7}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Significance of the Study}{7}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Technical Benefit}{8}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Social Impact}{8}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Environmental Welfare}{9}{subsection.1.5.3}%
+\contentsline {section}{\numberline {1.6}Assumptions, Scope, and Delimitations}{9}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Assumptions}{10}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Scope}{10}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Delimitations}{10}{subsection.1.6.3}%
+\contentsline {section}{\numberline {1.7}Description and Methodology of the Capstone Project on Operational Technologies}{10}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Estimated Work Schedule and Budget}{11}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Overview of the Capstone Project on Operational Technologies}{12}{section.1.9}%
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{Literature Review}}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Existing Work}{14}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Lacking in the Approaches}{16}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Summary}{18}{section.2.3}%
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Theoretical Considerations}}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Summary}{22}{section.3.1}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Design Considerations}}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Standards}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Summary}{27}{section.4.2}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Methodology}}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Implementation}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Evaluation}{34}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Summary}{36}{section.5.3}%
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Results and Discussions}}{37}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Summary}{42}{section.6.1}%
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Conclusions, Recommendations, and Future Directives}}{43}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Concluding Remarks}{44}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Contributions}{44}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Recommendations}{44}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Future Prospects}{46}{section.7.4}%
+\contentsline {chapter}{References}{48}{chapter*.15}%
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Student Research Ethics Clearance}}{57}{chapter.8}%
+\contentsline {chapter}{\chapternumberline {9}\MakeTextUppercase []{Answers to Questions to this Capstone Project on Operational Technologies}}{59}{chapter.9}%
+\contentsline {chapter}{\chapternumberline {10}\MakeTextUppercase []{Revisions to the Proposal}}{72}{chapter.10}%
+\contentsline {chapter}{\chapternumberline {11}\MakeTextUppercase []{Revisions to the Final}}{81}{chapter.11}%
+\contentsline {chapter}{\chapternumberline {12}\MakeTextUppercase []{Usage Examples}}{87}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Equations}{88}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Notations}{91}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Math alphabets}{91}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Vector symbols}{92}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}Matrix symbols}{92}{subsection.12.2.3}%
+\contentsline {subsection}{\numberline {12.2.4}Tensor symbols}{92}{subsection.12.2.4}%
+\contentsline {subsection}{\numberline {12.2.5}Bold math version}{93}{subsection.12.2.5}%
+\contentsline {subsubsection}{\numberline {12.2.5.1}Vector symbols}{93}{subsubsection.12.2.5.1}%
+\contentsline {subsubsection}{\numberline {12.2.5.2}Matrix symbols}{94}{subsubsection.12.2.5.2}%
+\contentsline {subsubsection}{\numberline {12.2.5.3}Tensor symbols}{94}{subsubsection.12.2.5.3}%
+\contentsline {section}{\numberline {12.3}Abbreviation}{100}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Glossary}{103}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Figure}{105}{section.12.5}%
+\contentsline {section}{\numberline {12.6}Table}{111}{section.12.6}%
+\contentsline {section}{\numberline {12.7}Algorithm or Pseudocode Listing}{118}{section.12.7}%
+\contentsline {section}{\numberline {12.8}Program/Code Listing}{120}{section.12.8}%
+\contentsline {section}{\numberline {12.9}Referencing}{122}{section.12.9}%
+\contentsline {subsection}{\numberline {12.9.1}A subsection}{123}{subsection.12.9.1}%
+\contentsline {subsubsection}{\numberline {12.9.1.1}A sub-subsection}{124}{subsubsection.12.9.1.1}%
+\contentsline {section}{\numberline {12.10}Citing}{125}{section.12.10}%
+\contentsline {subsection}{\numberline {12.10.1}Books}{125}{subsection.12.10.1}%
+\contentsline {subsection}{\numberline {12.10.2}Booklets}{128}{subsection.12.10.2}%
+\contentsline {subsection}{\numberline {12.10.3}Proceedings}{128}{subsection.12.10.3}%
+\contentsline {subsection}{\numberline {12.10.4}In books}{128}{subsection.12.10.4}%
+\contentsline {subsection}{\numberline {12.10.5}In proceedings}{129}{subsection.12.10.5}%
+\contentsline {subsection}{\numberline {12.10.6}Journals}{130}{subsection.12.10.6}%
+\contentsline {subsection}{\numberline {12.10.7}Theses/dissertations}{132}{subsection.12.10.7}%
+\contentsline {subsection}{\numberline {12.10.8}Technical Reports and Others}{133}{subsection.12.10.8}%
+\contentsline {subsection}{\numberline {12.10.9}Miscellaneous}{134}{subsection.12.10.9}%
+\contentsline {section}{\numberline {12.11}Index}{135}{section.12.11}%
+\contentsline {section}{\numberline {12.12}Adding Relevant PDF Pages}{136}{section.12.12}%
+\contentsline {chapter}{\chapternumberline {13}\MakeTextUppercase []{Vita}}{140}{chapter.13}%
+\contentsline {chapter}{\chapternumberline {14}\MakeTextUppercase []{Article Paper(s)}}{141}{chapter.14}%
+\contentsfinish 
+\contentsfinish 
