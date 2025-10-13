@@ -58,6 +58,36 @@
 	\label{fig:methodology_flowchart}
 \end{figure}
 
+\AtBeginEnvironment{longtable}{\tiny}
+\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\caption{Methods for Achieving Specific Objectives for Tinikling Detector} \label{tab:tinikling_methods} \\
+
+\hline
+\textbf{Specific Objective (SO)} & \textbf{Focus} & \textbf{Methodology} & \textbf{Expected Outcome} \\ \hline
+\endfirsthead
+
+\multicolumn{4}{c}{{\bfseries Table \thetable\ (continued)}} \\ \hline
+\textbf{Specific Objective (SO)} & \textbf{Focus} & \textbf{Methodology} & \textbf{Expected Outcome} \\ \hline
+\endhead
+
+\hline \multicolumn{4}{r}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{SO1} & To develop a real-time pose estimation pipeline for Tinikling & Use MediaPipe's hand and pose estimation to track key skeletal landmarks in real time from webcam input. Process the frames at 30 fps or higher & Pose landmarks detected with at least 90\% accuracy and 30 fps. Reliable identification of Tinikling steps from skeletal data. \\ \hline
+
+\textbf{SO2} & To make the pose estimation model robust to lighting, background clutter, and user variation & Use data augmentation (e.g., lighting, background noise, angles) and landmark-based representations to improve model robustness & Enhanced robustness under varying conditions with a minimum pose detection accuracy of 85\% across diverse backgrounds. \\ \hline
+
+\textbf{SO3} & To design a scoring and feedback system for Tinikling steps & Integrate a scoring system that compares detected poses with reference choreography using temporal alignment methods like Dynamic Time Warping (DTW) & Real-time feedback with numerical scores (0–100) for step-by-step accuracy breakdowns within 1 second after performance. \\ \hline
+
+\textbf{SO4} & To develop a desktop-based user interface with real-time feedback & Implement an intuitive user interface that provides visual and audio feedback, integrating with the pose estimation pipeline for immediate performance assessment & Real-time visual and audio cues within 200 ms, with performance scores displayed after each session. \\ \hline
+
+\textbf{SO5} & To evaluate system performance and usability through testing & Conduct controlled testing with at least 10 participants, measuring accuracy, latency, and user satisfaction using surveys and performance metrics & Performance evaluation with \(\geq 80\%\) positive feedback and refined system based on accuracy and latency benchmarks. \\ \hline
+
+\end{longtable}
+
 \section{Design Considerations}
 
 \subsection{Sensor choice, representation, and robustness}
@@ -85,5 +115,6 @@ Human pose estimation is the process of predicting the pose of human body parts.
 
 
 \section{Summary}
+In this chapter, we discussed the methodology and design considerations for building a real-time Tinikling learning application using human pose estimation. The main focus is on developing a pose estimation pipeline, using MediaPipe for landmark detection, and integrating a scoring system for feedback based on detected poses. Several methods are employed to ensure robustness against environmental challenges such as lighting and background clutter, and real-time feedback is provided to guide users in learning the Tinikling dance steps.
 
-Provide the gist of this chapter such that it reflects the contents and the message.
+\gls{not:It}

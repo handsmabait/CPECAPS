@@ -1,19 +1,19 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: document.aux
+The top-level auxiliary file: .\document.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: introduction.aux
 Reallocating 'name_of_file' (item size: 1) to 22 items.
 A level-1 auxiliary file: literature_review.aux
 Reallocating 'name_of_file' (item size: 1) to 31 items.
 I couldn't open auxiliary file theoretical_considerations.aux
----line 34 of file document.aux
+---line 41 of file .\document.aux
  : \@input{theoretical_considerations.aux
  :                                       }
 I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 26 items.
 I couldn't open auxiliary file design_considerations.aux
----line 39 of file document.aux
+---line 46 of file .\document.aux
  : \@input{design_considerations.aux
  :                                  }
 I'm skipping whatever remains of this command
@@ -23,15 +23,11 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apalike.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Reallocating 'name_of_file' (item size: 1) to 9 items.
-I couldn't open auxiliary file vita.aux
----line 60 of file document.aux
- : \@input{vita.aux
- :                 }
-I'm skipping whatever remains of this command
+A level-1 auxiliary file: vita.aux
 Database file #1: references.bib
 You've used 17 entries,
             1935 wiz_defined-function locations,
-            580 strings with 7320 characters,
+            580 strings with 7324 characters,
 and the built_in function-call counts, 6801 in all, are:
 = -- 639
 > -- 375
@@ -70,4 +66,4 @@ warning$ -- 0
 while$ -- 48
 width$ -- 0
 write$ -- 219
-(There were 3 error messages)
+(There were 2 error messages)
