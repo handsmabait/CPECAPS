@@ -5,7 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % as needed, comment the following lines by prefixing the percent sign (%) at the start of the line
 
-\Drafttrue % comment to disable putting some guides in the draft form of the document
+% \Drafttrue % comment to disable putting some guides in the draft form of the document
 
 \PutLineNumberstrue % comment to disable line numbers and certain  preparation guides 
 
@@ -13,9 +13,9 @@
 
 \GroupIDtrue % comment to disable group ID
 
-\ResultDiscusstrue % comment to disable results and discussions
+% \ResultDiscusstrue % comment to disable results and discussions
 
-\Conctrue % comment to disable conclusions
+% \Conctrue % comment to disable conclusions
 
 %\Finishedtrue % comment to disable manuscript for final defense or binding/submission
 
@@ -29,7 +29,8 @@
 
 \Vitatrue % comment to disable author(s) vita
 
-\Indextrue % comment to disable index 
+% \Indextrue % comment to disable index 
+\nocite{*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % document IDs
@@ -89,9 +90,9 @@
 \defineAuthor{surname3}{Mahait}
 \defineAuthor{firstname3}{Hans}
 
-\newcommand{\documentTitle}{Electrical, Electromagnetic, and Optical Characterization of the InP/InGaAs~Alloy~System} % put tilde (~) between words to indicate non-breaking adjacent words
+\newcommand{\documentTitle}{A Real-time Pose Estimation Application for Tinikling} % put tilde (~) between words to indicate non-breaking adjacent words
 
-\newcommand{\keywords}{alloy system, characterization, InP, InGaAs (see IEEE Taxonomy and Thesaurus)}
+\newcommand{\keywords}{Dance, Pose Estimation, Real-time, OpenPose }
 
 \newcommand{\finalDefenseDate}{\usdate\today} % replace ''\usdate\today'' by your final defense date; you may need to use non-breaking space with the use of tildes (~); if so, do not remove the tildes in order to not break the date
 
@@ -123,17 +124,17 @@
 \includeonly{% just comment those portions that you do not want to be included in the parsing
 	introduction,
 	literature_review,
-	theoretical_considerations,
-	design_considerations,
+	% theoretical_considerations,
+	% design_considerations,
 	methodology,
-	results_and_discussions,
-	conclusions,
-	answers_to_questions,
-	revisions_to_the_proposal,
-	revisions_to_the_final,
-	usage_examples,
-	publication,
-	vita,
+	% results_and_discussions,
+	% conclusions,
+	% answers_to_questions,
+	% revisions_to_the_proposal,
+	% revisions_to_the_final,
+	% usage_examples,
+	% publication,
+	% vita,
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,11 +173,11 @@
 		\addcontentsline{toc}{chapter}{Notations}
 		{
 			\printterms[database=notation, style=indexalign, prelocation=dotfill, location=first, columns=1, postname=\hspace{3em}]
-			{
-				\vspace{3ex}
-				\noindent Throughout this \MakeTextLowercase{\documentType}, mathematical notations conform to ISO~80000-2 standard, e.g., variable names are printed in italics, the only exception being acronyms like, e.g., $\mathrm{SNR}$, which are printed in regular font.  Constants are also set in regular font like $\mathrm{j}$.  Standard functions and operators are also set in regular font, e.g., in $\sin \left( \cdot \right)$, $\max \{ \cdot \} $.  Commonly used notations are $t$, $f$, $\mathrm{j} = \sqrt{-1}$, $n$ and $\exp \left( \cdot \right)$, which refer to the time variable, frequency variable, imaginary unit, $n$th variable, and exponential function, respectively.
-			}
-			\thispagestyle{plain}
+			% {
+			% 	\vspace{3ex}
+			% 	\noindent Throughout this \MakeTextLowercase{\documentType}, mathematical notations conform to ISO~80000-2 standard, e.g., variable names are printed in italics, the only exception being acronyms like, e.g., $\mathrm{SNR}$, which are printed in regular font.  Constants are also set in regular font like $\mathrm{j}$.  Standard functions and operators are also set in regular font, e.g., in $\sin \left( \cdot \right)$, $\max \{ \cdot \} $.  Commonly used notations are $t$, $f$, $\mathrm{j} = \sqrt{-1}$, $n$ and $\exp \left( \cdot \right)$, which refer to the time variable, frequency variable, imaginary unit, $n$th variable, and exponential function, respectively.
+			% }
+			% \thispagestyle{plain}
 		}
 		\cleardoublepage
 		
@@ -284,17 +285,17 @@
 	\begin{SingleSpace}
 		{\small \bibliography{references}}
 		\vfill
-		\LaTeX-comment this and the following texts after you have implemented them. See the following references for helpful guides for the bibliography and script editing in general.  Note that the links might be unavailable, but the names can be searched in the Web.
+		% \LaTeX-comment this and the following texts after you have implemented them. See the following references for helpful guides for the bibliography and script editing in general.  Note that the links might be unavailable, but the names can be searched in the Web.
 		
-		\begin{enumerate}
-			\item IEEE Citation Reference: \url{www.ieee.org/documents/ieeecitationref.pdf}
+		% \begin{enumerate}
+		% 	\item IEEE Citation Reference: \url{www.ieee.org/documents/ieeecitationref.pdf}
 			
-			\item IEEE Editorial Style manual: \url{www.ieee.org/documents/style_manual.pdf} 
+		% 	\item IEEE Editorial Style manual: \url{www.ieee.org/documents/style_manual.pdf} 
 			
-			\item IEEE Abbreviations for Transactions, Journals, Letters, and Magazines: \url{www.ieee.org/documents/trans_journal_names.pdf}
-		\end{enumerate}
+		% 	\item IEEE Abbreviations for Transactions, Journals, Letters, and Magazines: \url{www.ieee.org/documents/trans_journal_names.pdf}
+		% \end{enumerate}
 		
-		\noindent Also in your BibTeX file, enclose letters or words that should all be in uppercase in curly brackets. Example: {IBM}, {P}hilippines, e{X}tensible {M}arkup {L}anguage.
+		% \noindent Also in your BibTeX file, enclose letters or words that should all be in uppercase in curly brackets. Example: {IBM}, {P}hilippines, e{X}tensible {M}arkup {L}anguage.
 		
 	\end{SingleSpace}
 	\vfill
@@ -303,56 +304,81 @@
 	\end{flushright}
 	\cleardoublepage 
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%\SingleSpacing
-	%\appendix
-	%\renewcommand{\thechapter}{\Alph{chapter}}
-	%\renewcommand{\thesection}{\thechapter\arabic{section}}
-	%\appto\appendix{\renewcommand\thechapter{\AlphAlph{\value{chapter}}}} % for increasing appendix chapters beyond Z, i.e. AA, AB, etc.
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\SingleSpacing
+	\appendixR
+	\renewcommand{\thechapter}{\Alph{chapter}}
+	\renewcommand{\thesection}{\thechapter\arabic{section}}
+	\appto\appendix{\renewcommand\thechapter{\AlphAlph{\value{chapter}}}} % for increasing appendix chapters beyond Z, i.e. AA, AB, etc.
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\chapter{Student Research Ethics Clearance}
-	\includepdf[pages={1},%
-	offset=3.5mm -10mm,%
-	scale=0.75,%
-	pagecommand={},]
-	{./figure/STUDENT_RESEARCH_ETHICS_CLEARANCE.pdf}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\chapter{Member Skillset Identification}
+\begin{table}[h!]
+\centering
+\caption{Team Members' Programming Skills}
+\begin{tabular}{|l|p{2cm}|p{2cm}|p{2.5cm}|p{2.5cm}|p{2cm}|}
+\hline
+\textbf{Member} & \textbf{Model Dev.} & \textbf{UI Design} & \textbf{Source Control (GitHub)} & \textbf{Problem Solving \& Opt.} & \textbf{Python} \\ \hline
+Hans   & Intermediate & Novice & Expert & Intermediate & Intermediate \\ \hline
+Gerald & Intermediate & Basic  & Novice & Intermediate & Intermediate \\ \hline
+Nathan & Intermediate & Novice & Novice & Intermediate & Intermediate \\ \hline
+\end{tabular}
+\end{table}
+
 	\cleardoublepage
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\chapter{Answers to Questions to this \documentType}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\chapter{Work Breakdown Structure\documentType}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.95\textwidth]{hans_wbs.png} 
+		\caption{Work Breakdown Structure for Hans \documentType}
+		\label{fig:WBS_Hans}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.95\textwidth]{nathan_wbs.png} 
+		\caption{Work Breakdown Structure for Nathan \documentType}
+		\label{fig:WBS_Nathan}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.95\textwidth]{gerald_wbs.png} 
+		\caption{Work Breakdown Structure for Gerald \documentType}
+		\label{fig:WBS_Gerald}
+	\end{figure}
 	%\startcontents[chapters]
 	%\Mprintcontents 
-	\include{answers_to_questions}
+	% \include{answers_to_questions}
 	%\stopcontents[chapters]
 	\cleardoublepage
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\chapter{Revisions to the Proposal} 
-	\label{ch:revisions_to_the_proposal}
-	%\startcontents[chapters]
-	%\Mprintcontents  
-	\include{revisions_to_the_proposal}
-	%\stopcontents[chapters]
-	\cleardoublepage
+	% \chapter{Revisions to the Proposal} 
+	% \label{ch:revisions_to_the_proposal}
+	% %\startcontents[chapters]
+	% %\Mprintcontents  
+	% \include{revisions_to_the_proposal}
+	% %\stopcontents[chapters]
+	% \cleardoublepage
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\chapter{Revisions to the Final} 
-	\label{ch:revisions_to_the_final}
-	%\startcontents[chapters]
-	%\Mprintcontents  
-	\include{revisions_to_the_final}
-	%\stopcontents[chapters]
-	\cleardoublepage
+	% \chapter{Revisions to the Final} 
+	% \label{ch:revisions_to_the_final}
+	% %\startcontents[chapters]
+	% %\Mprintcontents  
+	% \include{revisions_to_the_final}
+	% %\stopcontents[chapters]
+	% \cleardoublepage
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\chapter{Usage Examples} 
-	\label{ch:usage_examples}
-	%\startcontents[chapters]
-	%\Mprintcontents  
-	\include{usage_examples}
-	%\stopcontents[chapters]
-	\cleardoublepage
+	% \chapter{Usage Examples} 
+	% \label{ch:usage_examples}
+	% %\startcontents[chapters]
+	% %\Mprintcontents  
+	% \include{usage_examples}
+	% %\stopcontents[chapters]
+	% \cleardoublepage
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\ifPubList
@@ -372,13 +398,13 @@
 	\fi
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\chapter{Article Paper(s)} 
-	\label{ch:article_paper}
-	\cleardoublepage
-	{
-	\ClearWallPaper
+	% \chapter{Article Paper(s)} 
+	% \label{ch:article_paper}
+	% \cleardoublepage
+	% {
+	% \ClearWallPaper
 
-	}
-	\cleardoublepage
+	% }
+	% \cleardoublepage
 
 \end{document}

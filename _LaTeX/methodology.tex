@@ -1,88 +1,87 @@
-Put an overview of the contents of chapter. Mention here your methodology flow through a figure and provide an overview of it and how your methodology achieves your objectives.  How your methodology achieves each of your specific objectives is what your panelists/examiners will be looking for.  Specify how your methodology achieves your general objective and specific objectives.  A point-by-point comparison how your methodology achieves each of your specific objectives is expected in the final \documentType.
-
-Also make sure that you refer clearly to the chapters on the Literature Review, Theoretical Considerations, and Design Considerations showing how your methodology ties with those that you have discussed in those chapters.
-
-Make an overview of the contents of the chapter. Put here your methodology flow through a figure and provide an overview of it.  
 
 
-In summative form, Table~\ref{tab:methods_per_objective} indicates the approaches, designs, modes, processes, programs, techniques, and/or ways that the \documentType reaches the objectives. 
-
-
-\begin{center}
-	{\scriptsize
-		\begin{tabularx}{\textwidth}{p{0.2\textwidth}|p{0.6\textwidth}|p{0.1\textwidth}}
-			\caption{Summary of methods for reaching the objectives} \label{tab:methods_per_objective} \\
-			\hline 
-			\hline 
-			\textbf{Objectives} & 
-			\textbf{Methods} &
-			\textbf{Locations}\\ 
-			\hline 
-			\endfirsthead
-			\multicolumn{3}{c}%
-			{\textit{Continued from previous page}} \\
-			\hline
-			\hline 
-			\textbf{Objectives} & 
-			\textbf{Methods} &
-			\textbf{Locations}\\ 
-			\hline 
-			\endhead
-			\hline 
-			\multicolumn{3}{r}{\textit{Continued on next page}} \\ 
-			\endfoot
-			\hline 
-			\endlastfoot
-			\hline
+% \begin{center}
+% 	{\scriptsize
+% 		\begin{tabularx}{\textwidth}{p{0.2\textwidth}|p{0.6\textwidth}|p{0.1\textwidth}}
+% 			\caption{Summary of methods for reaching the objectives} \label{tab:methods_per_objective} \\
+% 			\hline 
+% 			\hline 
+% 			\textbf{Objectives} & 
+% 			\textbf{Methods} &
+% 			\textbf{Locations}\\ 
+% 			\hline 
+% 			\endfirsthead
+% 			\multicolumn{3}{c}%
+% 			{\textit{Continued from previous page}} \\
+% 			\hline
+% 			\hline 
+% 			\textbf{Objectives} & 
+% 			\textbf{Methods} &
+% 			\textbf{Locations}\\ 
+% 			\hline 
+% 			\endhead
+% 			\hline 
+% 			\multicolumn{3}{r}{\textit{Continued on next page}} \\ 
+% 			\endfoot
+% 			\hline 
+% 			\endlastfoot
+% 			\hline
 			
 			
-			\Paste{GO} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
+% 			\Paste{GO} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
 			
 			
-			\Paste{SO1} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
+% 			\Paste{SO1} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
 			
 			
-			\Paste{SO2} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
+% 			\Paste{SO2} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
 			
 			
-			\Paste{SO3} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
+% 			\Paste{SO3} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
 			
 			
-			\Paste{SO4} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
+% 			\Paste{SO4} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
 			
 			
-			\Paste{SO5} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
+% 			\Paste{SO5} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
 			
-		\end{tabularx}
-	}
-\end{center}
+% 		\end{tabularx}
+% 	}
+% \end{center}
 
 
+\section{Methodology}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{methodology.png}
+	\caption{Methodology Flowchart}
+	\label{fig:methodology_flowchart}
+\end{figure}
+
+\section{Design Considerations}
+
+\subsection{Sensor choice, representation, and robustness}
+A study by Tölgyessy, Dekan, and Chovanec (2021) demonstrated that Kinect-family depth sensors produce explicit 3D skeletons and give higher joint fidelity in controlled settings, but the accuracy falls with occlusion, off-axis views, and increased distance. Zhang et al. (2020) described MediaPipe, which yields compact 2D/3D landmark coordinates from ordinary RGB cameras and runs in real time on mobile devices. Therefore, designers often choose landmarks for rapid, lightweight prototypes and mobile deployment, and reserve depth or IR systems for installation-grade fidelity when hardware is available. To reduce real-world failure modes, practitioners apply photometric and background augmentation and synthetic occlusions during training, and they add a short calibration step so system metrics align with an individual user’s range of motion.
+
+\subsection{Temporal alignment and scoring}
+Dance is a temporal activity and should be compared as a sequence rather than as isolated frames. Yu and Xiong (2019) demonstrate that Dynamic Time Warping (DTW) can align noisy, tempo-varying Kinect skeleton sequences and convert DTW distances into meaningful performance scores. Rallis et al. (2019) apply DTW to choreographic trajectories and show it can match patterns across high-precision (VICON) and low-cost (Kinect) capture systems. Thus, a practical scoring pipeline first aligns sequences with DTW (or a constrained variant) and then evaluates local spatial metrics such as joint-angle differences or normalized trajectory distances to produce interpretable, per-segment correctness scores.
+
+\subsection{Real-time feedback, segmentation, and pedagogy}
+Lin (2015) finds that immediate, clear feedback in dance exergames improves engagement and supports learning. Zhang et al. (2020) show that on-device landmark extraction can run at real-time rates suitable for low-latency feedback. Combining these results suggests a two-tier runtime design: use a fast, coarse matcher (enabled by on-device landmarks) for instant cues, and run a slower, higher-precision alignment and scoring pass for final grading. Breaking choreography into short labeled segments also simplifies alignment and reduces error accumulation; Rallis et al. (2019) illustrate that segment- or trajectory-level matching better supports choreographic retrieval and per-segment feedback.
+
+\subsection{Accessibility, personalization, and evaluation}
+Yu and Xiong (2019) convert DTW distances into calibrated percentage scores, which supports per-user calibration and comparison against an individualized baseline. Tölgyessy et al. (2021) recommend measuring sensor-level metrics such as joint error and dropout rates when choosing a capture modality. Therefore, system designs should include adjustable sensitivity, alternate gesture mappings, and user profiles, and evaluation should combine sensor metrics (joint error, dropout, latency) with human-centered measures (perceived accuracy, engagement, and learning gain) to justify architecture and scoring choices.
+
+\section{Theoretical Considerations}
+
+\subsection{Human Pose Estimation}
+
+Human pose estimation is the process of predicting the pose of human body parts. The data are typically stemming from RBD images or videos. Given that certain motions are motivated by human actions, detecting poses is a critical aspect of human action recognition (Song et al., 2021). It has a wide range of applications such as human-computer interaction, motion analysis, augmented reality, and virtual reality. The resulting output of human pose estimation is a skeleton-like representation of the human body consisting of nodes and limbs (Zheng et al, 2020)). There are 2 main types of human pose estimation, namely 2D and 3D. 2D pose estimation consists of predicting the posture of each of the body’s key points in a 2D plane, considering the X and Y axis. As for 3D pose estimation, it considers the Z axis, situating each point in a 3D space. It goes without saying that the 3D estimation would be much more difficult in comparison to 2D estimation in process or complexity due to underlying issues which may manifest such as noisy backgrounds, clothing, lighting, undetected joints, or occlusion (Ben Gamra & Akhloufi, 2021).  
 
 
-\section{Implementation}
-\label{sec:implement}
+\subsection{Human Action Recognition}
 
-Summarize the process used to create/set-up the work with an explanation of such process, instruments, and materials that you used if any. If the description is lengthy, use condensed bullet points. 
-
-\noindent \textit{Rule of thumb}: Implementation is how you made your  work; (keywords: implemented, created, made, soldered, programmed, etc.).
-
-If you wrote a program or made a simulation, you must state how the program or simulation functions in this section.	An algorithm or a pseudocode as shown in Table~\ref{tab:calcxn} is a good example.
-
-
-\graytx{\Blindtext}
-
-
-
-\section{Evaluation}
-\label{sec:evaluate}
-
-Describe the procedures for evaluating the correct behavior and outcome of your  work, including what information you need to gather and how you will obtain or measure it.  
-
-\textit{Rule of thumb}: Evaluation is how you tested your  work; (keywords: measured, tested, compared, simulated, etc.).
-
-\graytx{\Blindtext}
-
+	Human action recognition, otherwise known as HAR. is the process of detecting human actions in order to classify them through single sensor data, RBD image or video data, or three-dimensional depth and inertial data (Sakar et al., 2022). In the field of computer vision, one of the most challenging aspects of it is the automatic and precise identification of human activity. Over the years, there has been a significant increase in feature learning-based representations for human action recognition as a result of the widespread utilization of deep learning-based features. There are various applications of Human action recognition. For instance, automated surveillance systems make use of AI and machine learning algorithms in order to identify human actions for the sake of safety and security. Such a task, however, is made difficult due to various factors such as changing online environments, occlusion, different viewpoints, execution pace and biometric change. Not only this, but the human body also varies from person to person in factors such as size, appearances, and shapes. However, advancements in Convolutional Neural Networks, otherwise known as CNNs, resulted in significant progress for human action recognition through improvements on classification, segmentation and object detection. This largely applies more on image-related tasks  rather than videos as neural network models struggle to capture temporal information in videos due to a lack of substantial datasets (Morshed et al., 2022). 
 
 
 \section{Summary}

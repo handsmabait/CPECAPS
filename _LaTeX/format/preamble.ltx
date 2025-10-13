@@ -298,3 +298,12 @@
 \newcommand{\defineAuthor}[2]{\expandafter \newcommand 
                               \csname remark-#1\endcsname{#2}}
 \newcommand{\documentAuthor}[1]{\csname remark-#1\endcsname}
+
+% the following are for the DLSU thesis letterhead and its bordersize
+
+\usepackage{wallpaper} % for putting DLSU thesis paper letterhead; note that the background package fails that is why the wallpaper package has been used
+\usepackage{geometry}
+\geometry{left=36mm, right=29mm, bindingoffset=0mm, 
+          top=49mm, bottom=29mm, headsep=25mm} % for setting the bordersize; headsep is the distance of the header from the first text line
+					
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

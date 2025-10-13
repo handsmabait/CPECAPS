@@ -9,11 +9,11 @@ MediaPipe Hands (Zhang et al., Google / arXiv; MediaPipe docs).
  MediaPipe Hands presents a two-stage on-device pipeline (palm detector + hand-landmark regressor) that extracts 21 hand landmarks from a single RGB frame and runs in real time on mobile GPUs; the architecture and open implementation are widely used as a practical basis for gesture recognition because they offer compact, robust landmark outputs that are easier to classify than raw images. This work is especially relevant to mobile or cross-platform deployment without extra hardware. (https://arxiv.org/abs/2006.10214)
 Ultraleap / Leap Motion surveys and reviews.
  Reviews and vendor docs show that Ultraleap’s IR stereo cameras and LED illumination give very precise 3D joint tracking and low latency, making them popular for VR/installation work; academic comparisons find Leap/Ultraleap and MediaPipe are both capable, with trade-offs in precision versus hardware requirements. Ultraleap or similar IR camera hardware is a practical choice for professional installation quality (amusement park kiosk, VR attraction). (docs.ultraleap.com)
-Sign-language & gesture recognition studies (landmark + CNN/LSTM).
+Sign-language \& gesture recognition studies (landmark + CNN/LSTM).
  ASL and other sign recognition papers demonstrate that combining landmark features (from MediaPipe or depth sensors) with temporal models (LSTM/CNN temporal stacks) yields state-of-the-art results for complex hand sequences. These studies emphasize the importance of considering variable visibility conditions as spellcasting often requires temporal tracing (drawing shapes), and not just static poses. This also provides insight into dataset design and labeling strategies. (https://arxiv.org/html/2406.03729v1)
 A comparative study of advanced technologies and methods in hand gesture analysis and recognition systems (Rahman et.al, 2025)
 Hand gesture recognition is advancing as a key technology for human–machine interaction. This study reviews both non-vision (e.g., sensor-based) and vision-based approaches, examining tools such as hidden Markov models, finite state machines, color modeling, naive Bayes, deep networks, histogram features, and fuzzy clustering. Methods are categorized into detection, tracking, and recognition phases, with comparisons across static and dynamic gestures. The review highlights current technologies, their advantages and limitations, and identifies directions for future research.
-Hand Gesture Recognition Based on Computer Vision: A Review of Techniques (Oudah, Al-Naji, & Chahl, 2020)
+Hand Gesture Recognition Based on Computer Vision: A Review of Techniques (Oudah, Al-Naji, \& Chahl, 2020)
 Hand gestures, as a form of nonverbal communication, are applied in fields such as HCI, assistive communication, robotics, home automation, and healthcare. Research spans sensor-based and vision-based methods, with gestures categorized as static, dynamic, or hybrid. This paper reviews literature on gesture recognition, comparing techniques in terms of segmentation, classification, datasets, gesture types, camera use, detection range, and performance. It provides a comprehensive overview of methods, their merits and limitations, and potential applications.
 
 % Put here a narrative and a \index{summary}summary (not a duplicate) of your literature review chapter.  In this section, summarize and highlight the gap(s) found in the literature review in Chapter~\ref{ch:litrev}. Preferably, a table showing the summary would be helpful. 
@@ -60,23 +60,20 @@ Hand gestures, as a form of nonverbal communication, are applied in fields such 
 
 \end{enumerate}
 
-\noindent After the above-mentioned items, succinctly describe your solution.  Please avoid describing your entire solution here since you will articulate and elucidate it by showing what you want to achieve through your objectives, and how you will make it through your methodology.
-
-\noindent A well-constructed problem statement will convince your audience that the problem is real and worth having you solve it.
 
 
 
-\graytx{\blindtext}
 
 
 
 \section{Objectives and Deliverables}
 
-Your objectives are the states that you desire to achieve in solving the problem. The general objective is the main state to be achieved whereas the specific ones are sub-states to be achieved.
 
 \subsection{General Objective (GO)}
- \Copy{GO}{GO: To \graytx{\lipsumsentence[100]} };
-
+\begin{itemize}
+	\item \Copy{GO}{GO: To design and implement a real-time pose estimation-based tinikling learning application that provides immediate feedback and scoring to users based on their performance of tinikling dance routines;}
+\end{itemize}
+\
 \subsection{Specific Objectives (SOs)}
 
 \begin{itemize}
@@ -100,108 +97,150 @@ yields of the \documentType.
 
 
 \begin{table}[!htbp]
-	\caption{Expected Deliverables per Objective} 	
-	\label{tab:expected_deliverables} 
-	{\centering \scriptsize
-		\begin{tabular}{p{0.2\textwidth}|p{0.7\textwidth}}
-			\hline 
-			\hline 
-			\textbf{Objectives} & 
-			\textbf{Expected Deliverables}\\ 
-			\hline 
-%%			\endfirsthead
-%			\multicolumn{2}{c}%
-%			{\textit{Continued from previous page}} \\
-%			\hline
-%			\hline 
-%			\textbf{Objectives} & 
-%			\textbf{Expected Deliverables}\\ 
-%			\hline 
-%%			\endhead
-%			\hline 
-%			\multicolumn{2}{r}{\textit{Continued on next page}} \\ 
-%%			\endfoot
-%			\hline 
-%%			\endlastfoot
-%			\hline							
+\caption{Expected Deliverables per Objective}
+\label{tab:expected_deliverables}
+\centering
+\scriptsize
+\begin{tabular}{p{0.25\textwidth}|p{0.7\textwidth}}
+\hline
+\hline
+\textbf{Objectives} & \textbf{Expected Deliverables} \\ 
+\hline
+GO: To develop a real-time pose estimation-based Tinikling learning application &
+\begin{itemize}[leftmargin=*]
+  \item Prototype of Tinikling learning application.
+  \item Documentation and user manual.
+\end{itemize} \\ 
+\hline
 
-			\Paste{GO} & $\vdots$ \\ \hline
+SO1: To develop a real-time pose estimation pipeline that captures the movement of dancers through a webcam, detects skeletal keypoints, and analyzes poses for Tinikling steps with low latency and high accuracy. &
+\begin{itemize}
+  \item Optimized skeletal keypoints detection for Tinikling steps.
+  \item Implementation of webcam-based pose estimation pipeline.
+  \item Performance evaluation results.
+\end{itemize} \\ 
+\hline
 
-%			\Paste{SO1} & \blindlist{enumerate} \\ \hline		
-%
-%			\Paste{SO2} & \blindlist{enumerate} \\ \hline
-%						
-%			\Paste{SO3} & \blindlist{enumerate} \\ \hline
-%						
-%			\Paste{SO4} & \blindlist{enumerate} \\ \hline
-%						
-%			\Paste{SO5} & \blindlist{enumerate} \\ \hline 			
-%			
-		\end{tabular}
-	}
+SO2: To make the pose estimation model robust to lighting, background clutter, and user variation through dataset collection, augmentation, and landmark-based representations. &
+\begin{itemize}
+  \item Augmented dataset covering varied lighting, backgrounds, and user types.
+  \item Enhanced landmark-based model with robustness improvements.
+  \item Comparative performance evaluation report.
+\end{itemize} \\ 
+\hline
+
+SO3: To design and integrate a scoring and feedback system that evaluates users’ dance accuracy in a post-performance review by aligning user poses with reference choreographies. &
+\begin{itemize}
+  \item Scoring and feedback algorithm.
+  \item Tinikling choreography database.
+  \item Post-performance scoring output with accuracy metrics.
+\end{itemize} \\ 
+\hline
+
+SO4: To evaluate the system’s performance and usability through controlled testing with dancers or students, measuring accuracy, latency, and user experience for future refinement and educational deployment. &
+\begin{itemize}
+  \item Conducted controlled testing with participants.
+  \item Collected performance and usability metrics.
+  \item Evaluation report with recommendations for improvement.
+\end{itemize} \\ 
+\hline
+\end{tabular}
 \end{table}
 
 
 
 \section{Significance of the Study}
-
-\graytx{\blindtext}
+This capstone project focuses on the development of a tinikling learning application through the integration of pose estimation and human action recognition. The setup consists of a webcam, laptop, and two bamboo sticks for the tinikling dance. Such a setup offers affordability and accessibility benefits for users. Ultimately, it contributes to the field of both pose estimation and human action recognition by demonstrating a successful integration of the two in a live setup. 
+% \graytx{\blindtext}
 
 \subsection{Technical Benefit}
+\begin{enumerate}
+	\item Enables real-time pose estimation and post-performance feedback, improving accuracy and efficiency throughout the learning process. 
+	\item Low-cost software-based learning tool which uses a webcam and desktop computer rather than expensive motion capture equipment.
 
-\graytx{\blindlist{enumerate}}
+\end{enumerate}
+
+% \graytx{\blindlist{enumerate}}
 
 \subsection{Social Impact}
+\item Promotes cultural preservation by making Tinikling more accessible through interactive applications.
+\item Student engagement and participation in cultural education through gamifying the learning experience. 
+\item Supports remote or in-classroom instruction through allowing instructors to integrate technology with dance education. 
 
-\graytx{\blindlist{enumerate}}
+
+% \graytx{\blindlist{enumerate}}
 
 \subsection{Environmental Welfare}
+\item Utilizes existing and widely available hardware such as webcams and desktop new specialized equipment, which ultimately lessens electronic waste.
+	\item Encourages digital preservation of cultural heritage, lessening reliance on physical materials be it through either physical archives or infrastructure. 
 
-\graytx{\blindlist{enumerate}}
+% \graytx{\blindlist{enumerate}}
 
 
 
 \section{Assumptions, Scope, and Delimitations}
 
-Bulletize your assumptions in one group, and then bulletize the scope in another, and do the same for your delimitations. The assumptions to put here are those major facts or statements that are \textit{key} for your proposed solution to work. Scope refers to the space(s) for the operation of your proposed solution, whereas delimitations are the limits of the operation of your proposed solution.
+% Bulletize your assumptions in one group, and then bulletize the scope in another, and do the same for your delimitations. The assumptions to put here are those major facts or statements that are \textit{key} for your proposed solution to work. Scope refers to the space(s) for the operation of your proposed solution, whereas delimitations are the limits of the operation of your proposed solution.
 
 \subsection{Assumptions}
 
 \begin{enumerate}
-	\item \ldots;
+	\item Pose landmarks from consumer-grade RGB cameras or low-cost depth sensors provide sufficient fidelity to represent tinikling movements for temporal alignment and scoring.
 	
-	\item \ldots;
+	\item Choreography can be divided into short, labeled segments that enable reliable matching and targeted feedback.
 	
-	\item \ldots;	
+	\item Dynamic Time Warping or a constrained variant will handle tempo variation robustly for temporal alignment.
+	\item 	A brief per-user calibration step will improve scoring consistency.
 \end{enumerate}
 
 \subsection{Scope}
 \begin{enumerate}
-	\item \ldots;
-	
-	\item \ldots;
-	
-	\item \ldots;	
+	\item Cover automatic pose estimation, sequence alignment, and segment-level scoring for tinikling.
+	\item Accept landmark or depth inputs and provide immediate on-device cues during performance.
+
+
+	\item Produce a higher-precision final score after a more detailed pass.
+
+
+	\item Use self-sourced tinikling videos for model training when no public dataset exists.
+
+
+	\item Benchmark against general dance datasets where appropriate.
+
+
+	\item Report sensor-based metrics and simple user measures such as perceived accuracy and engagement.
+
 \end{enumerate}
 
 \subsection{Delimitations}
 \begin{enumerate}
-	\item \ldots;
-	
-	\item \ldots;
-	
-	\item \ldots;	
+	\item Will not perform detailed facial or hand mesh reconstruction.
+
+
+\item Will not replace multi-camera motion capture for research-grade kinematics.
+
+
+\item Will not guarantee reliable results under heavy occlusion, very low light, extreme off-axis views, or when clothing blends with the background.
+
+
+\item Will not attempt full generalization to all body shapes without additional data and tuning.
+
+
+\item Limits reflect known sensor and algorithm constraints and the aim to produce a practical, lightweight prototype.
+
 \end{enumerate}
 
 \section{Description and Methodology of the \documentType}
 
-A purpose of the description here is to re-steer/remind the panelist/reader again by tersely describing what your thesis is about (i.e. the problem and the main goal you want to achieve) in another way without sounding repetitive. 
+\begin{enumerate}
+	\item  Phase 1: Model Development  serves a precursor for Phase 2 wherein the specifics of the model, libraries, and environment to use are defined. In total, Phase 1 would last 4 weeks spanning from week 4 to 7. The bulk of the research for the project would be carried out during this phase.The dataset to be used for training would be collected during this phase as well. 
+	\item Phase 2: Model Training consists of training the model using the dataset collected in the previous phase. This phase will largely consist of testing and improving the resulting model. Tests would be conducted using the group members as dancers. This phase also includes the optimization of the model for real-time detection simultaneously with the music. In total, this phase would last 4 weeks spanning from week 8 to 11.
+	\item Phase 3: UI/EX Development consists of the integration of the trained model with a user interface. Once integrated final testing and refinement of the final program would be carried out. The final output would be presented as well during this phase along with the finalization of the documentation. This phase would last for 3 weeks spanning from week 11 to 13
+\end{enumerate}
 
-Your methodology is your means of achieving your stated objectives. What you put here is the summary of your methodology chapter.
 
 
 
-\graytx{\blindtext}
 
 
 \ifFinished
@@ -209,11 +248,34 @@ Your methodology is your means of achieving your stated objectives. What you put
 
 \section{Estimated Work Schedule and Budget}
 
-The estimated work schedule can be represented as a Gantt Chart or a combination of Project Network Diagram, Work Breakdown Structure, and Critical Path.  The budget can be made into a Bill of Materials, financial plan, or if your \documentType \ is funded and part of larger project, the cost, and date for reaching each milestone and/or deliverable for your part of the project.
+\subsection{Milestones and Gantt Chart}
+\begin{figure}[!htbp]
+	\centering
+		\includegraphics[width=0.5\textwidth]{CPECAPS.png}
+	    \caption{Milestone Gantt Chart for Real-time Pose Estimation Dance Software}
+	    \label{fig:MilestoneGanttChart}
+\end{figure}
 
-For ECE Department undergraduate theses, the individual Gantt Chart or Work Breakdown Schedule and Bill of Materials will be included in this section and be removed in the final document.
+\subsection{Budget}
+Given that the capstone project largely consists of software, apart from the use of a laptop for both programming, as well as actual implementation and usage of the dance program, the only expense to consider would be for that of a Webcam, which is already owned. 
 
-\graytx{\blindtext}
+\begin{table}[h]
+\centering
+\caption{Operational Financial Plan}
+\begin{tabular}{|l|r|}
+    \hline
+    \textbf{Item} & \textbf{Price} \\ \hline
+    Webcam  & ₱1,850 \\ \hline
+    \textbf{Total} & \textbf{₱1,850} \\ \hline
+\end{tabular}
+\end{table}
+
+
+% The estimated work schedule can be represented as a Gantt Chart or a combination of Project Network Diagram, Work Breakdown Structure, and Critical Path.  The budget can be made into a Bill of Materials, financial plan, or if your \documentType \ is funded and part of larger project, the cost, and date for reaching each milestone and/or deliverable for your part of the project.
+
+% For ECE Department undergraduate theses, the individual Gantt Chart or Work Breakdown Schedule and Bill of Materials will be included in this section and be removed in the final document.
+
+
 
 \ifPhD
 \section{Publication Plan}
@@ -225,5 +287,4 @@ For ECE Department undergraduate theses, the individual Gantt Chart or Work Brea
 
 \section{Overview of the \documentType}
 
-Provide here a brief summary and what the reader should expect from each succeeding chapter.  Show how each chapter is connected with each other.
-
+This capstone project focuses on developing a real-time pose estimation-based learning application for Tinikling, the Philippine national dance. It integrates computer vision and machine learning techniques in order to create an interactive learning platform that performance scoring to users. The project utilizes of webcams, MediaPipe-based skeletal landmark extraction to analyze users’ movements relative to reference choreography. Unlike expensive motion capture systems, this setup uses low-cost and accessible hardware, making the system practical for classroom, cultural, and home use. The system emphasizes cultural preservation by modernizing Tinikling education through technology. It enables students to learn and practice the dance interactively, provides technical benefits such as real-time feedback without costly sensors, and supports social and environmental goals through cultural engagement and sustainable use of existing hardware.
