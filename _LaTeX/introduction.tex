@@ -1,20 +1,21 @@
 \section{Background of the Study}
 
- Classical CV approaches used skin color segmentation, contour analysis, optical flow, and handcrafted descriptors (HOG, motion history images) to detect and classify gestures. Despite being simple and interpretable, those methods struggle with background variation and scale. The deep-learning era replaced handcrafted features with CNNs that learn hierarchical visual features directly from image data, yielding much higher accuracy for static hand pose and short-sequence recognition tasks. Many recent capstone and journal implementations pair OpenCV (for capture/preprocessing) with CNNs built and trained in TensorFlow/PyTorch to recognize a fixed vocabulary of gestures in real time. These hybrid pipelines are practical for capstone projects because OpenCV handles efficient frame processing while CNNs provide generalization across users and backgrounds. (https://pmc.ncbi.nlm.nih.gov/articles/PMC8321080/)
+Classical \acr{CV} approaches used skin color segmentation, contour analysis, optical flow, and handcrafted descriptors (\acr{HOG}, motion history images) to detect and classify gestures. Despite being simple and interpretable, those methods struggle with background variation and scale. The deep-learning era replaced handcrafted features with \acr{CNN} that learn hierarchical visual features directly from image data, yielding much higher accuracy for static hand pose and short-sequence recognition tasks. Many recent capstone and journal implementations pair \gls{OpenCV} (for capture/preprocessing) with \acr{CNN} built and trained in TensorFlow/PyTorch to recognize a fixed vocabulary of gestures in real time. These hybrid pipelines are practical for capstone projects because OpenCV handles efficient frame processing while \acr{CNN}s provide generalization across users and backgrounds. Furthermore, \gls{Operational Technologies} plays a crucial role in deploying these systems in real-world applications where physical devices and processes are monitored and controlled, such as in industrial automation or building management systems, which benefit from enhanced gesture recognition. \citep{oudah2020hand}
 
-  Instead of classifying raw images, several high-performance systems first extract skeletal landmarks (e.g., MediaPipe’s 21-point hand model) and feed those coordinates to a classifier (small CNN, MLP, or temporal model like LSTM). Landmark-based pipelines reduce sensitivity to background and scale and make models smaller and faster, which is ideal for mobile or AR deployment. Markerless commercial devices such as the Leap Motion Controller and Ultraleap cameras provide very accurate 3D joint data using IR illumination and multi-camera setups; those give superior fidelity but add hardware cost and integration work. For a capstone aiming at broad deployability, a practical approach is to prototype with MediaPipe + OpenCV + CNN (or lightweight temporal model) and consider Ultraleap integration later for high-precision installations. (https://arxiv.org/abs/2006.10214)
+  Instead of classifying raw images, several high-performance systems first extract skeletal landmarks (e.g., MediaPipe’s 21-point hand model) and feed those coordinates to a classifier (small CNN, MLP, or temporal model like LSTM). Landmark-based pipelines reduce sensitivity to background and scale and make models smaller and faster, which is ideal for mobile or AR deployment. Markerless commercial devices such as the Leap Motion Controller and \gls{Ultraleap} cameras provide very accurate 3D joint data using IR illumination and multi-camera setups; those give superior fidelity but add hardware cost and integration work. For a capstone aiming at broad deployability, a practical approach is to prototype with MediaPipe + OpenCV + CNN (or lightweight temporal model) and consider Ultraleap integration later for high-precision installations. (https://arxiv.org/abs/2006.10214)
 
 \section{Prior Studies}
-MediaPipe Hands (Zhang et al., Google / arXiv; MediaPipe docs).
- MediaPipe Hands presents a two-stage on-device pipeline (palm detector + hand-landmark regressor) that extracts 21 hand landmarks from a single RGB frame and runs in real time on mobile GPUs; the architecture and open implementation are widely used as a practical basis for gesture recognition because they offer compact, robust landmark outputs that are easier to classify than raw images. This work is especially relevant to mobile or cross-platform deployment without extra hardware. (https://arxiv.org/abs/2006.10214)
-Ultraleap / Leap Motion surveys and reviews.
- Reviews and vendor docs show that Ultraleap’s IR stereo cameras and LED illumination give very precise 3D joint tracking and low latency, making them popular for VR/installation work; academic comparisons find Leap/Ultraleap and MediaPipe are both capable, with trade-offs in precision versus hardware requirements. Ultraleap or similar IR camera hardware is a practical choice for professional installation quality (amusement park kiosk, VR attraction). (docs.ultraleap.com)
-Sign-language \& gesture recognition studies (landmark + CNN/LSTM).
- ASL and other sign recognition papers demonstrate that combining landmark features (from MediaPipe or depth sensors) with temporal models (LSTM/CNN temporal stacks) yields state-of-the-art results for complex hand sequences. These studies emphasize the importance of considering variable visibility conditions as spellcasting often requires temporal tracing (drawing shapes), and not just static poses. This also provides insight into dataset design and labeling strategies. (https://arxiv.org/html/2406.03729v1)
-A comparative study of advanced technologies and methods in hand gesture analysis and recognition systems (Rahman et.al, 2025)
-Hand gesture recognition is advancing as a key technology for human–machine interaction. This study reviews both non-vision (e.g., sensor-based) and vision-based approaches, examining tools such as hidden Markov models, finite state machines, color modeling, naive Bayes, deep networks, histogram features, and fuzzy clustering. Methods are categorized into detection, tracking, and recognition phases, with comparisons across static and dynamic gestures. The review highlights current technologies, their advantages and limitations, and identifies directions for future research.
-Hand Gesture Recognition Based on Computer Vision: A Review of Techniques (Oudah, Al-Naji, \& Chahl, 2020)
-Hand gestures, as a form of nonverbal communication, are applied in fields such as HCI, assistive communication, robotics, home automation, and healthcare. Research spans sensor-based and vision-based methods, with gestures categorized as static, dynamic, or hybrid. This paper reviews literature on gesture recognition, comparing techniques in terms of segmentation, classification, datasets, gesture types, camera use, detection range, and performance. It provides a comprehensive overview of methods, their merits and limitations, and potential applications.
+
+ MediaPipe Hands presents a two-stage on-device pipeline \citep{zhangmediapipe}(palm detector + hand-landmark regressor) that extracts 21 hand landmarks from a single RGB frame and runs in real time on mobile GPUs; the architecture and open implementation are widely used as a practical basis for gesture recognition because they offer compact, robust landmark outputs that are easier to classify than raw images. This work is especially relevant to mobile or cross-platform deployment without extra hardware. 
+
+
+ Reviews and vendor docs show that Ultraleap’s IR stereo cameras and LED illumination give very precise 3D joint tracking and low latency \citep{ultraleapHandTrackingOverview}, making them popular for VR/installation work; academic comparisons find Leap/Ultraleap and MediaPipe are both capable, with trade-offs in precision versus hardware requirements. Ultraleap or similar IR camera hardware is a practical choice for professional installation quality (amusement park kiosk, VR attraction). 
+\acr{ASL} and other sign recognition papers demonstrate that combining landmark features (from MediaPipe or depth sensors) with temporal models (\acr{LSTM}/\acr{CNN} temporal stacks) yields state-of-the-art results for complex hand sequences  \citep{verma2024enhancingsignlanguagedetection}. These studies emphasize the importance of considering variable visibility conditions as spellcasting often requires temporal tracing (drawing shapes), and not just static poses. This also provides insight into dataset design and labeling strategies.
+% all of this is rahman
+\gls{Hand Gesture Recognition} is advancing as a key technology for human–machine interaction. This study reviews both non-vision (e.g., sensor-based) and vision-based approaches, examining tools such as hidden Markov models \citep{RAHMAN2025125929}, finite state machines, color modeling, naive Bayes, deep networks, histogram features, and fuzzy clustering. Methods are categorized into detection, tracking, and recognition phases, with comparisons across static and dynamic gestures. The review highlights current technologies, their advantages and limitations, and identifies directions for future research.
+
+
+Hand gestures, as a form of nonverbal communication, are applied in fields such as HCI, assistive communication, robotics, home automation, and healthcare \citep{oudah2020hand}. Research spans sensor-based and vision-based methods, with gestures categorized as static, dynamic, or hybrid. This paper reviews literature on gesture recognition, comparing techniques in terms of segmentation, classification, datasets, gesture types, camera use, detection range, and performance. It provides a comprehensive overview of methods, their merits and limitations, and potential applications.
 
 % Put here a narrative and a \index{summary}summary (not a duplicate) of your literature review chapter.  In this section, summarize and highlight the gap(s) found in the literature review in Chapter~\ref{ch:litrev}. Preferably, a table showing the summary would be helpful. 
 
@@ -39,29 +40,27 @@ Hand gestures, as a form of nonverbal communication, are applied in fields such 
 
 \section{Problem Statement}
 
- Immersive interactive systems in gaming, AR, amusement parks, and accessibility still rely heavily on handheld controllers, touchscreens, or specialized hardware that break immersion, add cost, or exclude users with differing motor abilities. Markerless, camera-based hand-gesture recognition promises touchless, expressive input suitable for “magical” metaphors (casting spells, tracing runes) that are intuitive and socially engaging. However, real-world deployment is challenged by variable lighting, occlusion, noisy backgrounds, and latency. These problems make accuracy and robustness the central obstacles for any spell-casting CV system. Modern solutions that combine real-time hand-landmark extraction and convolutional neural networks (CNNs) have narrowed the gap, but careful design is required to meet the high level competency goals for responsiveness, cross-platform deployment, and accessibility. (https://pmc.ncbi.nlm.nih.gov/articles/PMC8321080/)\noindent A persuasive problem statement from a contextualized and intended-audience-awareness perspective consists of:
+ Immersive interactive systems in gaming, AR, amusement parks, and accessibility still rely heavily on handheld controllers, touchscreens, or specialized hardware that break immersion, add cost, or exclude users with differing motor abilities. Markerless, camera-based hand-gesture recognition promises touchless, expressive input suitable for “magical” metaphors (casting spells, tracing runes) that are intuitive and socially engaging. However, real-world deployment is challenged by variable lighting, occlusion, noisy backgrounds, and latency. These problems make accuracy and robustness the central obstacles for any spell-casting CV system. Modern solutions that combine real-time hand-landmark extraction and convolutional neural networks\acr{CNN} have narrowed the gap, but careful design is required to meet the high level competency goals for responsiveness, cross-platform deployment, and accessibility. \citep{oudah2020hand}
+
+
 
 \begin{enumerate}
-	\item PS1: description of the ideal scenario for your intended audience	
-	\begin{itemize}
-		\item Describe the goals, desired state, or the values that your audience considers important and that are relevant to the problem.
-	\end{itemize}
-	
-	\item PS2:  reality of the situation
-	\begin{itemize}
-			\item Describe a condition that prevents the goal, state, or value discussed in PS1 from being achieved or realized at the present time.
-			\item It is imperative to make the audience feel the pain point.
-	\end{itemize}
-	
-	\item PS3:  consequences for the audience		
-	\begin{itemize}
-			\item Using specific details, show how the situation contains a little promise of improvement unless something is done.
-	\end{itemize}
-
+    \item \textbf{PS1: }	
+    \begin{itemize}
+        \item The ideal scenario for our intended audience (students, educators, and dance enthusiasts) is to have an intuitive and interactive learning tool that facilitates the practice of Tinikling, the traditional Filipino dance. This tool should provide \gls{real-time feedback} on users' dance movements, enabling them to learn and improve their technique. The desired state includes accessibility to the tool on various devices (e.g., desktop, mobile) with a user-friendly interface and a high level of accuracy in tracking the dance steps. Additionally, it should support personalized feedback, enabling users of all skill levels to progress and feel engaged in learning this cultural heritage.
+    \end{itemize}
+    
+    \item \textbf{PS2:}
+    \begin{itemize}
+        \item Currently, learning Tinikling requires access to physical dance classes or instructors, which are often limited by geographical location, financial resources, or time constraints. For individuals unable to attend such classes, the lack of affordable and effective learning tools becomes a significant barrier. Additionally, existing dance-learning technologies are either costly, relying on specialized hardware, or lack the immediacy of real-time feedback, making it difficult for learners to practice and perfect their movements without direct instructor guidance.
+        \item The pain point is that students who want to practice Tinikling at home or in remote areas are unable to receive real-time guidance or feedback, leading to slower progress, incorrect technique, and a loss of motivation.
+    \end{itemize}
+    
+    \item \textbf{PS3: }		
+    \begin{itemize}
+        \item Without a tool that offers immediate feedback and a clear learning path, students practicing Tinikling on their own are likely to struggle with incorrect movements, which may lead to frustration. Over time, this lack of progress could result in a lack of confidence, disengagement from the learning process, and ultimately, the inability to learn the dance correctly. Furthermore, the absence of accessible learning tools risks the loss of cultural knowledge and the fading of the Tinikling tradition, especially among younger generations who may not have easy access to traditional learning methods.
+    \end{itemize}
 \end{enumerate}
-
-
-
 
 
 
@@ -71,7 +70,7 @@ Hand gestures, as a form of nonverbal communication, are applied in fields such 
 
 \subsection{General Objective (GO)}
 \begin{itemize}
-	\item \Copy{GO}{GO: To design and implement a real-time pose estimation-based tinikling learning application that provides immediate feedback and scoring to users based on their performance of tinikling dance routines;}
+	\item \Copy{GO}{GO: To design and implement a real-time \gls{Pose estimation}-based tinikling learning application that provides immediate feedback and scoring to users based on their performance of tinikling dance routines;}
 \end{itemize}
 \
 \subsection{Specific Objectives (SOs)}
@@ -79,7 +78,7 @@ Hand gestures, as a form of nonverbal communication, are applied in fields such 
 \begin{itemize}
 	\item \Copy{SO1}{SO1: To implement a real-time pipeline that captures camera frames, extracts robust hand features (landmarks or processed images), and classifies gestures into a configurable spell vocabulary with low latency (~30 fps target) and high accuracy;};
 	
-	\item \Copy{SO2}{SO2: To  make the model robust to lighting, background clutter, and user variation through data augmentation and landmark-based representations  };
+	\item \Copy{SO2}{SO2: To  make the model robust to lighting, background clutter, and user variation through \gls{data augmentation} and landmark-based representations  };
 	
 	\item \Copy{SO3}{SO3: To design the system to be deployable across desktop, mobile, and simple AR setups using cross-platform libraries (OpenCV, MediaPipe, TensorFlow/TensorFlow Lite) };
 	
@@ -92,10 +91,6 @@ Hand gestures, as a form of nonverbal communication, are applied in fields such 
 
 \subsection{Expected Deliverables}
 
-Table~\ref{tab:expected_deliverables} shows the outputs, products, results, achievements, gains, realizations, and/or
-yields of the \documentType. 
-
-
 \begin{table}[!htbp]
 \caption{Expected Deliverables per Objective}
 \label{tab:expected_deliverables}
@@ -107,7 +102,7 @@ yields of the \documentType.
 \textbf{Objectives} & \textbf{Expected Deliverables} \\ 
 \hline
 GO: To develop a real-time pose estimation-based Tinikling learning application &
-\begin{itemize}[leftmargin=*]
+\begin{itemize}=
   \item Prototype of Tinikling learning application.
   \item Documentation and user manual.
 \end{itemize} \\ 
@@ -189,7 +184,7 @@ This capstone project focuses on the development of a tinikling learning applica
 	
 	\item Choreography can be divided into short, labeled segments that enable reliable matching and targeted feedback.
 	
-	\item Dynamic Time Warping or a constrained variant will handle tempo variation robustly for temporal alignment.
+	\item \gls{Dynamic Time Warping} or a constrained variant will handle tempo variation robustly for temporal alignment.
 	\item 	A brief per-user calibration step will improve scoring consistency.
 \end{enumerate}
 
@@ -287,4 +282,4 @@ Given that the capstone project largely consists of software, apart from the use
 
 \section{Overview of the \documentType}
 
-This capstone project focuses on developing a real-time pose estimation-based learning application for Tinikling, the Philippine national dance. It integrates computer vision and machine learning techniques in order to create an interactive learning platform that performance scoring to users. The project utilizes of webcams, MediaPipe-based skeletal landmark extraction to analyze users’ movements relative to reference choreography. Unlike expensive motion capture systems, this setup uses low-cost and accessible hardware, making the system practical for classroom, cultural, and home use. The system emphasizes cultural preservation by modernizing Tinikling education through technology. It enables students to learn and practice the dance interactively, provides technical benefits such as real-time feedback without costly sensors, and supports social and environmental goals through cultural engagement and sustainable use of existing hardware.
+This capstone project focuses on developing a real-time pose estimation-based learning application for \gls{Tinikling}, the Philippine national dance. It integrates computer vision and machine learning techniques in order to create an interactive learning platform that performance scoring to users. The project utilizes of webcams, \gls{MediaPipe}-based skeletal landmark extraction to analyze users’ movements relative to reference choreography. Unlike expensive motion capture systems, this setup uses low-cost and accessible hardware, making the system practical for classroom, cultural, and home use. The system emphasizes cultural preservation by modernizing Tinikling education through technology. It enables students to learn and practice the dance interactively, provides technical benefits such as real-time feedback without costly sensors, and supports social and environmental goals through cultural engagement and sustainable use of existing hardware.

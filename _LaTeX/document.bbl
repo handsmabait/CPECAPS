@@ -1,0 +1,103 @@
+\begin{thebibliography}{}
+
+\bibitem[Büyükgökoğlan and Uğuz, 2025]{turkey2025}
+Büyükgökoğlan, E. and Uğuz, S. (2025).
+\newblock Development of a performance evaluation system in turkish folk dance
+  using deep learning-based pose estimation.
+\newblock {\em Tehnicki vjesnik - Technical Gazette}, 32:1817--1824.
+
+\bibitem[Lei et~al., 2023]{leililiu2023dancemovement}
+Lei, P., LI, N., and Liu, H. (2023).
+\newblock {\em Dance Movement Recognition Based on Gesture}, pages 448--452.
+
+\bibitem[Lin, 2015]{linjustdance}
+Lin, J.-H. (2015).
+\newblock “just dance”: The effects of exergame feedback and controller use
+  on physical activity and psychological outcomes.
+\newblock {\em Games for Health Journal}, 4(3):183--189.
+\newblock PMID: 26182062.
+
+\bibitem[Oudah et~al., 2020]{oudah2020hand}
+Oudah, M., Al-Naji, A.~A., and Chahl, J. (2020).
+\newblock Hand gesture recognition based on computer vision: A review of
+  techniques.
+\newblock {\em Journal of Imaging}, 6:73.
+
+\bibitem[Protopapadakis et~al., 2018]{Protopapadakis2018dancepose}
+Protopapadakis, E., Voulodimos, A., Doulamis, A., Camarinopoulos, S., Doulamis,
+  N., and Miaoulis, G. (2018).
+\newblock Dance pose identification from motion capture data: A comparison of
+  classifiers.
+\newblock {\em Technologies}, 6.
+
+\bibitem[Rahman et~al., 2025]{RAHMAN2025125929}
+Rahman, M.~M., Uzzaman, A., Khatun, F., Aktaruzzaman, M., and Siddique, N.
+  (2025).
+\newblock A comparative study of advanced technologies and methods in hand
+  gesture analysis and recognition systems.
+\newblock {\em Expert Systems with Applications}, 266:125929.
+
+\bibitem[Rallis et~al., 2019]{trallis2019}
+Rallis, I., Protopapadakis, E., Voulodimos, A., Doulamis, N., Doulamis, A., and
+  Bardis, G. (2019).
+\newblock Choreographic pattern analysis from heterogeneous motion capture
+  systems using dynamic time warping.
+\newblock {\em Technologies}, 7(3).
+
+\bibitem[Sun and Song, 2025]{sun2025dancemovement}
+Sun, J. and Song, L. (2025).
+\newblock Dance movement pose estimation in complex scenes based on improved
+  high-resolution networks.
+\newblock {\em Taiwan Ubiquitous Information}, 10(1):---.
+
+\bibitem[Tölgyessy et~al., 2021]{tolgyessy2021skeletontracking}
+Tölgyessy, M., Dekan, M., and Chovanec, �. (2021).
+\newblock Skeleton tracking accuracy and precision evaluation of kinect v1,
+  kinect v2, and the azure kinect.
+\newblock {\em Applied Sciences}, 11(12).
+
+\bibitem[Ultraleap, 2025]{ultraleapHandTrackingOverview}
+Ultraleap (2025).
+\newblock Ultraleap hand tracking overview.
+
+\bibitem[Venkatrayappa et~al., 2024]{venkatrayappa2024survey3dhumanbody}
+Venkatrayappa, D., Tremeau, A., Muselet, D., and Colantoni, P. (2024).
+\newblock Survey of 3d human body pose and shape estimation methods for
+  contemporary dance applications.
+
+\bibitem[Verma et~al., 2024]{verma2024enhancingsignlanguagedetection}
+Verma, A.~R., Singh, G., Meghwal, K., Ramji, B., and Dadheech, P.~K. (2024).
+\newblock Enhancing sign language detection through mediapipe and convolutional
+  neural networks (cnn).
+
+\bibitem[Xu et~al., 2022]{xu_adaptive_2022}
+Xu, X., Zou, Q., and Lin, X. (2022).
+\newblock Adaptive {Hypergraph} {Neural} {Network} for {Multi}-{Person} {Pose}
+  {Estimation}.
+\newblock {\em Proceedings of the AAAI Conference on Artificial Intelligence},
+  36(3):2955--2963.
+
+\bibitem[Yu and Xiong, 2019]{yuxiong2019}
+Yu, X. and Xiong, S. (2019).
+\newblock A dynamic time warping based algorithm to evaluate kinect-enabled
+  home-based physical rehabilitation exercises for older people.
+\newblock {\em Sensors}, 19(13).
+
+\bibitem[Zhang et~al., 2020]{zhangmediapipe}
+Zhang, F., Bazarevsky, V., Vakunov, A., Tkachenka, A., Sung, G., Chang, C., and
+  Grundmann, M. (2020).
+\newblock Mediapipe hands: On-device real-time hand tracking.
+\newblock {\em CoRR}, abs/2006.10214.
+
+\bibitem[Zhao et~al., 2025]{ZHAO202566}
+Zhao, H., Du, B., Jia, Y., and Zhao, H. (2025).
+\newblock Danceformer: Hybrid transformer model for real-time dance pose
+  estimation and feedback.
+\newblock {\em Alexandria Engineering Journal}, 121:66--76.
+
+\bibitem[Zheng et~al., 2023]{zheng2023deeplearningbasedhumanpose}
+Zheng, C., Wu, W., Chen, C., Yang, T., Zhu, S., Shen, J., Kehtarnavaz, N., and
+  Shah, M. (2023).
+\newblock Deep learning-based human pose estimation: A survey.
+
+\end{thebibliography}

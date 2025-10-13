@@ -1,48 +1,85 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: document.aux
-I found no \citation commands---while reading file document.aux
-I found no \bibdata command---while reading file document.aux
-I found no \bibstyle command---while reading file document.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            83 strings with 490 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
+The top-level auxiliary file: .\document.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: literature_review.aux
+Reallocating 'name_of_file' (item size: 1) to 31 items.
+A level-1 auxiliary file: theoretical_considerations.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: design_considerations.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: methodology.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apalike.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: vita.aux
+Database file #1: references.bib
+Warning--entry type for "ultraleapHandTrackingOverview" isn't style-file defined
+--line 155 of file references.bib
+You're missing a field name---line 161 of file references.bib
+ :   year         = {2025},  
+ :                           % approximate / check last update date
+I'm skipping whatever remains of this entry
+You're missing a field name---line 279 of file references.bib
+ :   pages = {---},  
+ :                   % You can fill this in if the pages are available
+I'm skipping whatever remains of this entry
+You're missing an entry type---line 301 of file references.bib
+ :   email = {sj14472024@
+ :                       163.com, jy4290@163.com}
+I'm skipping whatever remains of this entry
+You're missing an entry type---line 301 of file references.bib
+ :   email = {sj14472024@163.com, jy4290@
+ :                                       163.com}
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 365 of file references.bib
+ : 
+ : @Article{yuxiong2019,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty publisher in leililiu2023dancemovement
+You've used 17 entries,
+            1935 wiz_defined-function locations,
+            573 strings with 7239 characters,
+and the built_in function-call counts, 6758 in all, are:
+= -- 631
+> -- 374
+< -- 6
++ -- 134
+- -- 130
+* -- 602
+:= -- 1235
+add.period$ -- 47
+call.type$ -- 17
+change.case$ -- 149
+chr.to.int$ -- 17
+cite$ -- 18
+duplicate$ -- 227
+empty$ -- 399
+format.name$ -- 153
+if$ -- 1270
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+missing$ -- 14
+newline$ -- 84
+num.names$ -- 51
+pop$ -- 122
+preamble$ -- 1
+purify$ -- 150
 quote$ -- 0
-skip$ -- 0
+skip$ -- 183
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 363
+swap$ -- 22
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 100
+warning$ -- 1
+while$ -- 45
 width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+write$ -- 211
+(There were 5 error messages)
