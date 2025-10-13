@@ -1,5 +1,11 @@
 % !TeX root = document.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+% define missing counters only if they are not already defined
+\@ifundefined{c@Hpagenote}{\newcounter{Hpagenote}}{}
+\@ifundefined{c@su@anzahl}{\newcounter{su@anzahl}}{}
+\makeatother
+
 \input{./format/preamble.ltx} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,6 +112,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{./format/postamble.ltx} 
+
+% Fallback definition: if \appendixR is not defined by the template, define it to \appendix
+\providecommand{\appendixR}{\appendix}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % for placing user-defined-ambles

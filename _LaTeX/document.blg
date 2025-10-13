@@ -1,85 +1,73 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: .\document.aux
+The top-level auxiliary file: document.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: introduction.aux
 Reallocating 'name_of_file' (item size: 1) to 22 items.
 A level-1 auxiliary file: literature_review.aux
 Reallocating 'name_of_file' (item size: 1) to 31 items.
-A level-1 auxiliary file: theoretical_considerations.aux
+I couldn't open auxiliary file theoretical_considerations.aux
+---line 34 of file document.aux
+ : \@input{theoretical_considerations.aux
+ :                                       }
+I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 26 items.
-A level-1 auxiliary file: design_considerations.aux
+I couldn't open auxiliary file design_considerations.aux
+---line 39 of file document.aux
+ : \@input{design_considerations.aux
+ :                                  }
+I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 16 items.
 A level-1 auxiliary file: methodology.aux
 Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apalike.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Reallocating 'name_of_file' (item size: 1) to 9 items.
-A level-1 auxiliary file: vita.aux
+I couldn't open auxiliary file vita.aux
+---line 60 of file document.aux
+ : \@input{vita.aux
+ :                 }
+I'm skipping whatever remains of this command
 Database file #1: references.bib
-Warning--entry type for "ultraleapHandTrackingOverview" isn't style-file defined
---line 155 of file references.bib
-You're missing a field name---line 161 of file references.bib
- :   year         = {2025},  
- :                           % approximate / check last update date
-I'm skipping whatever remains of this entry
-You're missing a field name---line 279 of file references.bib
- :   pages = {---},  
- :                   % You can fill this in if the pages are available
-I'm skipping whatever remains of this entry
-You're missing an entry type---line 301 of file references.bib
- :   email = {sj14472024@
- :                       163.com, jy4290@163.com}
-I'm skipping whatever remains of this entry
-You're missing an entry type---line 301 of file references.bib
- :   email = {sj14472024@163.com, jy4290@
- :                                       163.com}
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 365 of file references.bib
- : 
- : @Article{yuxiong2019,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--empty publisher in leililiu2023dancemovement
 You've used 17 entries,
             1935 wiz_defined-function locations,
-            573 strings with 7239 characters,
-and the built_in function-call counts, 6758 in all, are:
-= -- 631
-> -- 374
-< -- 6
-+ -- 134
+            580 strings with 7320 characters,
+and the built_in function-call counts, 6801 in all, are:
+= -- 639
+> -- 375
+< -- 4
++ -- 132
 - -- 130
-* -- 602
-:= -- 1235
-add.period$ -- 47
+* -- 620
+:= -- 1249
+add.period$ -- 51
 call.type$ -- 17
-change.case$ -- 149
+change.case$ -- 150
 chr.to.int$ -- 17
-cite$ -- 18
-duplicate$ -- 227
-empty$ -- 399
+cite$ -- 17
+duplicate$ -- 222
+empty$ -- 406
 format.name$ -- 153
-if$ -- 1270
+if$ -- 1267
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 14
-newline$ -- 84
+newline$ -- 88
 num.names$ -- 51
-pop$ -- 122
+pop$ -- 114
 preamble$ -- 1
 purify$ -- 150
 quote$ -- 0
-skip$ -- 183
+skip$ -- 172
 stack$ -- 0
-substring$ -- 363
-swap$ -- 22
-text.length$ -- 1
+substring$ -- 378
+swap$ -- 14
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 100
-warning$ -- 1
-while$ -- 45
+type$ -- 102
+warning$ -- 0
+while$ -- 48
 width$ -- 0
-write$ -- 211
-(There were 5 error messages)
+write$ -- 219
+(There were 3 error messages)
